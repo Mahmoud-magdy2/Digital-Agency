@@ -563,4 +563,92 @@ footer .textarea-p p {
   font-weight: 500;
 }
 
+.custom-toast {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 9999;
+  min-width: 60px;
+  min-height: 60px;
+  background: #817ef0;
+  color: #fff;
+  font-family: "Modern Antiqua", K2D, sans-serif;
+  font-size: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(129, 126, 240, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s, transform 0.4s;
+  transform: translateY(-40px) scale(0.8);
+  padding: 0 24px;
+  text-align: center;
+}
+
+.custom-toast.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.modal-toast {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-toast.show {
+  display: flex;
+}
+
+.modal-toast-content {
+  background: #fff;
+  border-radius: 18px;
+  padding: 32px 32px 18px 32px;
+  box-shadow: 0 8px 32px rgba(129, 126, 240, 0.25);
+  text-align: center;
+  min-width: 320px;
+  max-width: 90vw;
+  position: relative;
+  animation: popin 0.3s;
+}
+
+@keyframes popin {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.modal-toast-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.modal-toast-message {
+  font-family: "Modern Antiqua", K2D, sans-serif;
+  font-size: 20px;
+  color: #222;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.modal-toast-note {
+  font-size: 13px;
+  color: #888;
+  margin-top: 8px;
+}
+
 /*# sourceMappingURL=style.css.map */
